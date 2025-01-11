@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUNALS | Apply</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url(assets/img/bg.png);
+        background-size: cover;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 20px;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        color: white;
+      }
+
+      .main h1 {
+        font-size: 24px;
+        margin-bottom: 20px; 
+        font-family: mainFont, sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .main h2 {
+        font-size: 16px;
+        margin: 10px 0 20px 0;
+      }
+
+      .main button {
+        background-color: #17191e9e;
+        border: 2px solid #201f1e;
+        padding: 10px;
+        width: 200px; 
+        font-size: 16px;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: mainFont;
+        font-weight: 900;
+        letter-spacing: 0.3vh;
+        margin-top: 10px; 
+      }
+      
+      .main button:hover{
+        transform: translateY(3px);
+      }
+
+      
+      @media (max-width: 768px) {
+        body{
+            background-image: url(assets/img/bg-mobile.png);
+            background-size: cover;
+        }
+
+        .slider-header {
+          font-size: 18px;
+        }
+
+        .slider-item img {
+          max-width: 90%;
+          max-height: 300px;
+        }
+
+        .slider-item h3 {
+          font-size: 15px;
+        }
+
+        .logo img {
+          height: 45px;
+        }
+
+        .nav-links {
+          gap: 20px;
+        }
+
+        .nav-links a {
+          font-size: small;
+        }
+
+        .main h1{
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="apply.html">Apply</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="main">
+        <h1>#goodTeamGoodWork</h1>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMA6Xo987XNSiXriehowQXbCPsX04RpDbuYk4RD9aNkx6ndQ/viewform"><button>DELEGATE</button></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdps9TR9UZtfeX8XiwMrKLlzGXO6UekgQads6e4i7_TRwaokg/viewform?usp=sf_link"><button>DELEGATION</button></a>
+        <a href="https://docs.google.com/forms/d/1FqJ86TnMW_R7xZWMeOnjjmyp67FX-b8tePBms954Bxo/edit"><button>ADMIN</button></a>
+      </div>
+    </div>
+    <footer>
+      <a href="https://instagram.com/jesusawss" target="_blank">
+        Tüm hakları saklıdır © Aras Arkan
+      </a>
+    </footer>
+  </body>
+</html>

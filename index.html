@@ -37,9 +37,8 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 16px;
-        padding: 20px;
-        width: 300px;
-        height: 300px;
+        padding: 50px;
+        width: 500px;
         text-align: center;
         color: white;
       }
@@ -51,16 +50,49 @@
         overflow: hidden;
         white-space: nowrap;
         border-right: 2px solid rgba(255, 255, 255, 0.75);
+        text-shadow: 0 0 5px #fff;
       }
 
-      .main h2 {
-        font-size: 16px;
-        margin: 10px 0 20px 0;
+      .countdown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        gap: 10px;
+      }
+
+      .countdown .box {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-align: center;
+        color: white;
+        flex: 1;
+      }
+
+      .countdown .box.days {
+        margin-right: 20px;
+      }
+
+      .countdown .box span {
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .countdown .box label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .main button {
-        background-color: #8d55249e;
-        border: 2px solid #3d2b1e;
+        background-color: #17191e9e;
+        border: 2px solid #201f1e;
         padding: 10px 30px;
         font-size: 16px;
         color: white;
@@ -73,39 +105,48 @@
       }
 
       .main button:hover {
-        background-color: #3d2b1e;
+        background-color: #14161c;
         transform: scale(1.05);
       }
 
       @media (max-width: 768px) {
-        body{
+        body {
           background-image: url(assets/img/bg-mobile.png);
           background-size: cover;
         }
 
-        .slider-header {
+        .main {
+          padding: 20px;
+          width: 300px;
+        }
+
+        .countdown {
+          flex-direction: row;
+          gap: 10px;
+        }
+
+        .countdown .box {
+          padding: 5px 10px;
+        }
+
+        .countdown .box.days {
+          margin-right: 0;
+        }
+
+        .countdown .box.days {
+          margin-right: 10px;
+        }
+
+        .countdown .box span {
+          display: block;
           font-size: 18px;
+          font-weight: bold;
         }
 
-        .slider-item img {
-          max-width: 90%;
-          max-height: 300px;
-        }
-
-        .slider-item h3 {
-          font-size: 15px;
-        }
-
-        .logo img {
-          height: 45px;
-        }
-
-        .nav-links {
-          gap: 20px;
-        }
-
-        .nav-links a {
-          font-size: small;
+        .countdown .box label {
+          font-size: 8px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
       }
     </style>
@@ -129,6 +170,24 @@
     <div class="container">
       <div class="main">
         <h1 id="typewriter"></h1>
+        <div class="countdown">
+          <div class="box days">
+            <span id="days">0</span>
+            <label>Days</label>
+          </div>
+          <div class="box">
+            <span id="hours">0</span>
+            <label>Hours</label>
+          </div>
+          <div class="box">
+            <span id="minutes">0</span>
+            <label>Minutes</label>
+          </div>
+          <div class="box">
+            <span id="seconds">0</span>
+            <label>Seconds</label>
+          </div>
+        </div>
         <a href="apply.html"><button>APPLY NOW</button></a>
       </div>
     </div>
@@ -141,7 +200,7 @@
 
     <script>
       const text = "MUNALS";
-      const speed = 200; 
+      const speed = 550;
       let index = 0;
 
       function typeWriter() {
@@ -156,6 +215,29 @@
       }
 
       typeWriter();
+
+      const countdown = () => {
+        const eventDate = new Date("2025-02-28T00:00:00").getTime();
+        const now = new Date().getTime();
+        const gap = eventDate - now;
+
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+
+        const days = Math.floor(gap / day);
+        const hours = Math.floor((gap % day) / hour);
+        const minutes = Math.floor((gap % hour) / minute);
+        const seconds = Math.floor((gap % minute) / second);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+      };
+
+      setInterval(countdown, 1000);
     </script>
   </body>
 </html>

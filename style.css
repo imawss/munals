@@ -2,7 +2,12 @@
 
 @font-face {
   font-family: mainFont;
-  src: url(assets/fonts/GrandCru-LightS.otf);
+  src: url(assets/font/CormorantGaramond-Italic.ttf);
+}
+
+@font-face {
+    font-family: secondFont;
+    src: url(assets/font/CormorantGaramond-Regular.ttf);
 }
 
 body {
@@ -19,7 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background: #20160928;
+  background: #1b18145c;
   backdrop-filter: blur(28px);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -42,12 +47,13 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #a35503;
-  font-family: mainFont, sans-serif;
+  color: whitesmoke;
+  font-family: secondFont, sans-serif;
   font-weight: 900;
   font-size: x-large;
   display: inline-block;
   transition: transform 0.3s ease;
+  text-shadow: 0 0 5px #fff;
 }
 
 .nav-links a:hover {
@@ -84,7 +90,7 @@ footer a:hover {
 
 @media screen and (max-width: 820px) {
   body {
-    background-image: url(assets/img/bg-edited.png);
+    background-image: url(assets/img/bg-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -101,6 +107,6 @@ footer a:hover {
   }
 
   .nav-links a {
-    font-size: large;
+    font-size: x-large;
   }
 }
