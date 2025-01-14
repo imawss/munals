@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUNALS | Team</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <style>
+      body {
+        background-image: url(assets/img/bg.png);
+        background-size: cover;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 90%;
+        max-width: 1200px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 16px;
+        color: white;
+      }
+
+      .team-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .team-row img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .team-row img:hover {
+        transform: scale(1.1);
+      }
+
+      .our-team {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+        font-family: secondFont, sans-serif;
+        text-shadow: 0 0 5px #fff;
+      }
+
+      @media (max-width: 768px) {
+        .team-row {
+          gap: 5px;
+        }
+
+        .team-row img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .our-team {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="apply.html">Apply</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="team-row">
+        <img src="assets/img/team/academic-advisor.png" alt="Team Member" />
+        <img src="assets/img/team/director-general.png" alt="Team Member" />
+        <img
+          src="assets/img/team/deputy-director-general.png"
+          alt="Team Member"
+        />
+        <img src="assets/img/team/secretary-general.png" alt="Team Member" />
+        <img src="assets/img/team/chief.png" alt="Team Member" />
+        <img src="assets/img/team/media-batin.png" alt="Team Member" />
+        <img src="assets/img/team/meadia-bahaeddin.png" alt="Team Member" />
+      </div>
+      <div class="our-team">OUR TEAM</div>
+      <div class="team-row">
+        <img src="assets/img/team/it.png" alt="Team Member" />
+        <img src="assets/img/team/ent.png" alt="Team Member" />
+        <img src="assets/img/team/ent-yagiz.png" alt="Team Member" />
+        <img src="assets/img/team/admin.png" alt="Team Member" />
+        <img src="assets/img/team/press.png" alt="Team Member" />
+        <img src="assets/img/team/security.png" alt="Team Member" />
+        <img src="assets/img/team/pr.png" alt="Team Member" />
+      </div>
+    </div>
+    <footer>
+      <a href="https://instagram.com/jesusawss" target="_blank">
+        Tüm hakları saklıdır © Aras Arkan
+      </a>
+    </footer>
+  </body>
+</html>
