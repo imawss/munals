@@ -38,17 +38,20 @@
         border-radius: 16px;
         padding: 20px;
         width: 300px;
-        height: 300px;
+        min-height: 400px;
         text-align: center;
         color: white;
       }
 
       .main h1 {
         font-size: 24px;
-        margin-bottom: 20px; 
         font-family: mainFont, sans-serif;
         overflow: hidden;
         white-space: nowrap;
+        text-overflow: ellipsis; 
+        margin-bottom: 20px; 
+        width: 100%; 
+        text-align: center; 
       }
 
       .main h2 {
@@ -60,7 +63,7 @@
         background-color: #17191e9e;
         border: 2px solid #201f1e;
         padding: 10px;
-        width: 200px; 
+        width: 200px;
         font-size: 16px;
         color: white;
         border-radius: 8px;
@@ -69,18 +72,17 @@
         font-family: mainFont;
         font-weight: 900;
         letter-spacing: 0.3vh;
-        margin-top: 10px; 
+        margin-top: 10px;
       }
-      
-      .main button:hover{
+
+      .main button:hover {
         transform: translateY(3px);
       }
 
-      
       @media (max-width: 768px) {
-        body{
-            background-image: url(assets/img/bg-mobile.png);
-            background-size: cover;
+        body {
+          background-image: url(assets/img/bg-mobile.png);
+          background-size: cover;
         }
       }
     </style>
@@ -103,11 +105,26 @@
     <div class="container">
       <div class="main">
         <h1>#goodTeamGoodWork</h1>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSckOvE6PdpQ5OQteAMIEifweqTWlaMbnQhDpbakVSWF_cnJOQ/viewform?usp=dialog"><button>DELEGATE</button></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSejW78dYz9NbjvuA97h27jnSVCjhryRaZay-_uIzQOE-aqcUA/viewform?usp=header"><button>DELEGATION</button></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSerTYMsreynx95fDqQurEJpIJkS_8kLaD17A5RzJV3SPVfZ6Q/viewform?usp=header"><button>UNEP DELEGIERTEN</button></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfj2bKrFdJ0N9FYFkuPrQp1BjaR1KV4u54JC9fy5yN8bLEVuQ/viewform"><button>ADMIN</button></a>
-        <a href="https://docs.google.com/forms/d/12Cpz1AWEJHkQWSfmyWNGKFRZ-kMjQ4hrupxREWsqMI0/edit"><button>PRESS</button></a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSckOvE6PdpQ5OQteAMIEifweqTWlaMbnQhDpbakVSWF_cnJOQ/viewform?usp=dialog"
+          ><button>DELEGATE</button></a
+        >
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSejW78dYz9NbjvuA97h27jnSVCjhryRaZay-_uIzQOE-aqcUA/viewform?usp=header"
+          ><button>DELEGATION</button></a
+        >
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSerTYMsreynx95fDqQurEJpIJkS_8kLaD17A5RzJV3SPVfZ6Q/viewform?usp=header"
+          ><button>UNEP DELEGIERTEN</button></a
+        >
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfj2bKrFdJ0N9FYFkuPrQp1BjaR1KV4u54JC9fy5yN8bLEVuQ/viewform"
+          ><button>ADMIN</button></a
+        >
+        <a
+          href="https://docs.google.com/forms/d/12Cpz1AWEJHkQWSfmyWNGKFRZ-kMjQ4hrupxREWsqMI0/edit"
+          ><button>PRESS</button></a
+        >
       </div>
     </div>
     <footer>
