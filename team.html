@@ -17,6 +17,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
+        padding: 10px; 
       }
 
       .container {
@@ -25,8 +26,8 @@
         justify-content: center;
         align-items: center;
         padding: 10px;
-        width: 90%;
-        max-width: 1200px;
+        width: 80%; 
+        max-width: 900px;
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.2);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -40,42 +41,47 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
-        margin: 10px 0;
+        gap: 5px; 
+        margin: 5px 0; 
       }
 
       .team-row img {
-        width: 120px;
-        height: 120px;
+        width: 100px; 
+        height: 100px;
         object-fit: cover;
         transition: transform 0.3s ease;
       }
 
       .team-row img:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
 
       .our-team {
         text-align: center;
-        font-size: 24px;
+        font-size: 20px; 
         font-weight: bold;
-        margin: 10px 0;
+        margin: 5px 0; 
         font-family: secondFont, sans-serif;
         text-shadow: 0 0 5px #fff;
       }
 
       @media (max-width: 768px) {
+        .container {
+          width: 95%; 
+          padding: 5px; 
+        }
+
         .team-row {
-          gap: 5px;
+          gap: 3px;
         }
 
         .team-row img {
-          width: 80px;
+          width: 80px; 
           height: 80px;
         }
 
         .our-team {
-          font-size: 20px;
+          font-size: 18px; 
         }
       }
     </style>
@@ -105,11 +111,11 @@
         />
         <img src="assets/img/team/secretary-general.png" alt="Team Member" />
         <img src="assets/img/team/chief.png" alt="Team Member" />
-        <img src="assets/img/team/media-batin.png" alt="Team Member" />
-        <img src="assets/img/team/meadia-bahaeddin.png" alt="Team Member" />
       </div>
       <div class="our-team">OUR TEAM</div>
       <div class="team-row">
+        <img src="assets/img/team/media-batin.png" alt="Team Member" />
+        <img src="assets/img/team/meadia-bahaeddin.png" alt="Team Member" />
         <img src="assets/img/team/it.png" alt="Team Member" />
         <img src="assets/img/team/ent.png" alt="Team Member" />
         <img src="assets/img/team/ent-yagiz.png" alt="Team Member" />
@@ -121,7 +127,7 @@
     </div>
     <footer>
       <a href="https://instagram.com/jesusawss" target="_blank">
-        Tüm hakları saklıdır © Aras Arkan
+        All rights reserved © Aras Arkan
       </a>
     </footer>
   </body>
