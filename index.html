@@ -109,6 +109,43 @@
         transform: scale(1.05);
       }
 
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        border-top: 5px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        position: absolute;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #spinner-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #14161C;
+        z-index: 9999;
+      }
+
+      #spinner {
+        width: 100px;
+        height: 100px;
+      }
+
       @media (max-width: 768px) {
         body {
           background-image: url(assets/img/bg-mobile.png);
@@ -166,6 +203,10 @@
         </div>
       </nav>
     </header>
+
+    <div id="spinner-container">
+      <img src="assets/img/logo.png" alt="Loading..." id="spinner" />
+    </div>
 
     <div class="container">
       <div class="main">
@@ -238,6 +279,15 @@
       };
 
       setInterval(countdown, 1000);
+    </script>
+
+    <script>
+      document.body.style.backgroundImage = "url('assets/img/bg.png')";
+      const backgroundImage = new Image();
+      backgroundImage.src = "assets/img/bg.png";
+      backgroundImage.onload = () => {
+        document.getElementById("spinner-container").style.display = "none";
+      };
     </script>
   </body>
 </html>
