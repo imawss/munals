@@ -109,6 +109,28 @@
         transform: scale(1.05);
       }
 
+      .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+        visibility: hidden;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
       @media (max-width: 768px) {
         body {
           background-image: url(assets/img/bg-mobile.png);
@@ -167,6 +189,7 @@
       </nav>
     </header>
 
+    <div class="spinner" id="spinner"></div>
     <div class="container">
       <div class="main">
         <h1 id="typewriter"></h1>
@@ -238,6 +261,12 @@
       };
 
       setInterval(countdown, 1000);
+    </script>
+
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("spinner").style.visibility = "hidden";
+      });
     </script>
   </body>
 </html>
